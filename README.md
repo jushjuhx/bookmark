@@ -8,3 +8,8 @@
 
 ### 1.2.1 挖掘
 1. [Tricking blind Java deserialization for a treat](https://securitycafe.ro/2017/11/03/tricking-java-serialization-for-a-treat/)
+
+# 二、SQL注入
+
+## 2.1 SQLMAP
+1. [sqlmap 检测剖析](https://paper.seebug.org/729/)
