@@ -9,6 +9,7 @@
 1. [深入理解 JAVA 反序列化漏洞](https://paper.seebug.org/312/)
 2. [common-collections中Java反序列化漏洞导致的RCE原理分析](http://drops.xmd5.com/static/drops/papers-10467.html)
 3. [Commons Collections Java反序列化漏洞深入分析](https://security.tencent.com/index.php/blog/msg/97)
+4. [探秘Java反序列化漏洞四：Fastjson反序列化漏洞分析](http://rui0.cn/archives/950)
 
 ### 1.2.2 漏洞挖掘
 1. [Tricking blind Java deserialization for a treat](https://securitycafe.ro/2017/11/03/tricking-java-serialization-for-a-treat/)
