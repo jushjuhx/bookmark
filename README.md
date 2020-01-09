@@ -15,6 +15,14 @@
 ### 1.2.2 漏洞挖掘
 1. [Tricking blind Java deserialization for a treat](https://securitycafe.ro/2017/11/03/tricking-java-serialization-for-a-treat/)
 2. [如何绕过高版本JDK的限制进行JNDI注入利用](https://kingx.me/Restrictions-and-Bypass-of-JNDI-Manipulations-RCE.html)
+3. [mysql jdbc 反序列化漏洞测试](https://xz.aliyun.com/t/7067) 
+
+  注：可通过记录MySQL执行日志的方式，查看客户端的版本/是否执行了对应的SQL语句。
+```
+SET GLOBAL log_output = 'TABLE';SET GLOBAL general_log = 'ON';  //日志开启
+SELECT * from mysql.general_log WHERE argument like '%@@session.auto_increment_increment%' ORDER BY event_time DESC; //关键词直接定位，根据结果判断客户端版本，也可以直接换其他关键词
+SELECT * from mysql.general_log WHERE argument like '%ceshi.objs%' ORDER BY event_time DESC; //查看是否执行了相应的SQL语句
+```
 
 ### 1.2.3 Gadget挖掘
 1. [Java反序列化漏洞辅助工具之 gadgetinspector](http://galaxylab.org/java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%E4%B9%8B-gadgetinspector/) ; [github gadgetinspector地址](https://github.com/JackOfMostTrades/gadgetinspector)
